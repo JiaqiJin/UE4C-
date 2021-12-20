@@ -1,13 +1,14 @@
 // Copyright Epic Games, Inc. All Rights Reserved.
 
 #include "ExcaliburCharacter.h"
-#include "HeadMountedDisplayFunctionLibrary.h"
 #include "Camera/CameraComponent.h"
 #include "Components/CapsuleComponent.h"
 #include "Components/InputComponent.h"
 #include "GameFramework/CharacterMovementComponent.h"
 #include "GameFramework/Controller.h"
 #include "GameFramework/SpringArmComponent.h"
+#include "Excalibur/Attributes/HeroPlayerAttributeSet.h"
+#include "Excalibur/Character/HeroPlayerState.h"
 
 //////////////////////////////////////////////////////////////////////////
 // AExcaliburCharacter
@@ -52,6 +53,11 @@ void AExcaliburCharacter::PossessedBy(AController* NewController)
 {
 	Super::PossessedBy(NewController);
 	UE_LOG(LogTemp, Warning, TEXT("Possessed"));
+
+	AHeroPlayerState* PS = GetPlayerState<AHeroPlayerState>();
+	{
+		UE_LOG(LogTemp, Warning, TEXT("PS"));
+	}
 }
 
 //////////////////////////////////////////////////////////////////////////

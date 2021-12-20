@@ -12,13 +12,19 @@
  * 
  */
 UCLASS()
-class EXCALIBUR_API AHeroPlayerState : public APlayerState
+class EXCALIBUR_API AHeroPlayerState : public APlayerState, public IAbilitySystemInterface
 {
 	GENERATED_BODY()
 	
 public:
 	AHeroPlayerState();
 
+	// Implement IAbilitySystemInterface
+	class UAbilitySystemComponent* GetAbilitySystemComponent() const override;
+
+	class UHeroPlayerAttributeSet* GetAttributeSetBase() const;
+
+	void InitializeAttributes();
 protected:
 	class UAbilitySystemComponent* AbilitySystemComponent;
 

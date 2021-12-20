@@ -4,10 +4,20 @@
 
 #include "CoreMinimal.h"
 #include "AttributeSet.h"
+#include "AbilitySystemComponent.h"
 #include "HeroPlayerAttributeSet.generated.h"
 
+
+// Uses macros from AttributeSet.h
+#define ATTRIBUTE_ACCESSORS(ClassName, PropertyName) \
+	GAMEPLAYATTRIBUTE_PROPERTY_GETTER(ClassName, PropertyName) \
+	GAMEPLAYATTRIBUTE_VALUE_GETTER(PropertyName) \
+	GAMEPLAYATTRIBUTE_VALUE_SETTER(PropertyName) \
+	GAMEPLAYATTRIBUTE_VALUE_INITTER(PropertyName)
+
 /**
- * 
+ * Defines the set of all GameplayAttributes for your Games like health, etc.
+ * Attributes are float values defined by the struct "FGameplayAttributeData"
  */
 UCLASS()
 class EXCALIBUR_API UHeroPlayerAttributeSet : public UAttributeSet
@@ -16,4 +26,63 @@ class EXCALIBUR_API UHeroPlayerAttributeSet : public UAttributeSet
 	
 public:
 	UHeroPlayerAttributeSet();
+
+	// Movement Attribute
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData PlayerMovementSpeed;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, PlayerMovementSpeed);
+
+	// Movement Multiplier Attribute
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData PlayerMovementMultiplier;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, PlayerMovementMultiplier);
+
+	// Jump Attribute
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData PlayerJumpHeight;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, PlayerJumpHeight);
+
+	// Jump Multiplier Attribute
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData PlayerJumpHeightMultiplier;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, PlayerJumpHeightMultiplier);
+
+	// Air Multiplier Attribute
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData PlayerAirControl;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, PlayerAirControl);
+
+public:
+
+	// Respond to changes to an Attribute's Current Value before changes happen.
+	void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
+
+public:
+
+	// Health Attribute
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData Health;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, Health);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData MaxHealth;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, MaxHealth);
+
+	// Mana Attribute
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData Mana;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, Mana);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData MaxMana;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, MaxMana);
+
+	// Level Attribute
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData HeroLevel;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, HeroLevel);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData HeroMaxLevel;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, HeroMaxLevel);
 };

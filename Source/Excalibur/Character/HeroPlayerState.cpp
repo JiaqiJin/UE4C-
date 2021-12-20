@@ -13,3 +13,18 @@ AHeroPlayerState::AHeroPlayerState()
 	
 	AttributeSetBase = CreateDefaultSubobject<UHeroPlayerAttributeSet>(TEXT("AttributeSetBase"));
 }
+
+void AHeroPlayerState::InitializeAttributes()
+{
+
+}
+
+UAbilitySystemComponent* AHeroPlayerState::GetAbilitySystemComponent() const
+{
+	return AbilitySystemComponent;
+}
+
+UHeroPlayerAttributeSet* AHeroPlayerState::GetAttributeSetBase() const
+{
+	return AttributeSetBase;
+}

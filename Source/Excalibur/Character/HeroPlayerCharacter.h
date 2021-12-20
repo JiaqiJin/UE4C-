@@ -5,7 +5,6 @@
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
 #include "Excalibur/ExcaliburCharacter.h"
-#include "AbilitySystemComponent.h"
 #include "HeroPlayerCharacter.generated.h"
 
 UCLASS()

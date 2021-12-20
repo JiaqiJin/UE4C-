@@ -4,13 +4,17 @@
 
 #include "CoreMinimal.h"
 #include "GameFramework/Character.h"
+#include "AbilitySystemInterface.h"
+#include "AbilitySystemComponent.h"
+#include "Abilities/GameplayAbility.h"
 #include "ExcaliburCharacter.generated.h"
 
-UCLASS(config=Game)
-class AExcaliburCharacter : public ACharacter
+UCLASS()
+class EXCALIBUR_API AExcaliburCharacter : public ACharacter, public IAbilitySystemInterface
 {
 	GENERATED_BODY()
 
+protected:
 	/** Camera boom positioning the camera behind the character */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class USpringArmComponent* CameraBoom;
@@ -32,6 +36,7 @@ public:
 	// Only called on the Server. Calls before Server's AcknowledgePossession.
 	virtual void PossessedBy(AController* NewController) override;
 
+	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const { return nullptr; }
 protected:
 	/** Called for forwards/backward input */
 	void MoveForward(float Value);
@@ -61,5 +66,12 @@ public:
 	FORCEINLINE class USpringArmComponent* GetCameraBoom() const { return CameraBoom; }
 	/** Returns FollowCamera subobject **/
 	FORCEINLINE class UCameraComponent* GetFollowCamera() const { return FollowCamera; }
+
+protected:
+	// The core ActorComponent for interfacing with the GameplayAbilities System
+	TWeakObjectPtr<class UAbilitySystemComponent> AbilitySystemComponent;
+
+	// Player Attribute Set
+	TWeakObjectPtr<class UHeroPlayerAttributeSet> PlayerAttributes;
 };
 
