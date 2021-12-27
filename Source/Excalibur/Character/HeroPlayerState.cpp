@@ -16,7 +16,11 @@ AHeroPlayerState::AHeroPlayerState()
 
 void AHeroPlayerState::InitializeAttributes()
 {
-
+	if (AbilitySystemComponent && AttributeDataTable)
+	{
+		//UE_LOG(LogTemp, Warning, TEXT("InitializeAttributes"));
+		const UAttributeSet* Attributes = AbilitySystemComponent->InitStats(UHeroPlayerAttributeSet::StaticClass(), AttributeDataTable);
+	}
 }
 
 UAbilitySystemComponent* AHeroPlayerState::GetAbilitySystemComponent() const

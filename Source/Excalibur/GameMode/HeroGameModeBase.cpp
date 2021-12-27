@@ -17,5 +17,4 @@ AHeroGameModeBase::AHeroGameModeBase()
 	{
 		PlayerControllerClass = PlayerControllerClassBP.Class;
 	}
-
 }

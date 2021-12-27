@@ -25,8 +25,14 @@ public:
 	class UHeroPlayerAttributeSet* GetAttributeSetBase() const;
 
 	void InitializeAttributes();
-protected:
-	class UAbilitySystemComponent* AbilitySystemComponent;
 
+protected:
+	// Ability System Componenet
+	class UAbilitySystemComponent* AbilitySystemComponent;
+	// Player Attributes
 	class UHeroPlayerAttributeSet* AttributeSetBase;
+
+	// Player Attribute Table
+	UPROPERTY(EditDefaultsOnly, BlueprintReadWrite, Category = "Player|Abilities")
+	class UDataTable* AttributeDataTable;
 };

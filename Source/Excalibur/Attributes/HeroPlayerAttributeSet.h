@@ -27,6 +27,11 @@ class EXCALIBUR_API UHeroPlayerAttributeSet : public UAttributeSet
 public:
 	UHeroPlayerAttributeSet();
 
+	// Respond to changes to an Attribute's Current Value before changes happen.
+	void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
+
+public:
+
 	// Movement Attribute
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
 	FGameplayAttributeData PlayerMovementSpeed;
@@ -54,11 +59,6 @@ public:
 
 public:
 
-	// Respond to changes to an Attribute's Current Value before changes happen.
-	void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
-
-public:
-
 	// Health Attribute
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
 	FGameplayAttributeData Health;
@@ -68,6 +68,14 @@ public:
 	FGameplayAttributeData MaxHealth;
 	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, MaxHealth);
 
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData HealthRegenerationRate;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, HealthRegenerationRate);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData HealthRegeneration;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, HealthRegeneration);
+
 	// Mana Attribute
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
 	FGameplayAttributeData Mana;
@@ -76,6 +84,31 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
 	FGameplayAttributeData MaxMana;
 	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, MaxMana);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData ManaRegeneration;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, ManaRegeneration);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData ManaRegenerationRate;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, ManaRegenerationRate);
+
+	// Mana Attribute
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData Stamina;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, Stamina);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData MaxStamina;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, MaxStamina);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData StaminaRegeneration;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, StaminaRegeneration);
+
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
+	FGameplayAttributeData StaminaRegenerationRate;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, StaminaRegenerationRate);
 
 	// Level Attribute
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
