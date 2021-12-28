@@ -14,7 +14,7 @@ class EXCALIBUR_API AHeroPlayerCharacter : public AExcaliburCharacter
 
 public:
 	// Sets default values for this character's properties
-	AHeroPlayerCharacter();
+	AHeroPlayerCharacter(const class FObjectInitializer& InitializerObject);
 
 protected:
 	// Called when the game starts or when spawned

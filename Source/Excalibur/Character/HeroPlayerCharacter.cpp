@@ -2,9 +2,11 @@
 
 
 #include "HeroPlayerCharacter.h"
+#include "MovementComp/HeroCharacterMovementComponent.h"
 
 // Sets default values
-AHeroPlayerCharacter::AHeroPlayerCharacter()
+AHeroPlayerCharacter::AHeroPlayerCharacter(const class FObjectInitializer& InitializerObject)
+	: Super(InitializerObject.SetDefaultSubobjectClass<UHeroCharacterMovementComponent>(ACharacter::CharacterMovementComponentName))
 {
  	
 }

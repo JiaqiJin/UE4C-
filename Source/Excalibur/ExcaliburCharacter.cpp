@@ -13,7 +13,8 @@
 //////////////////////////////////////////////////////////////////////////
 // AExcaliburCharacter
 
-AExcaliburCharacter::AExcaliburCharacter()
+AExcaliburCharacter::AExcaliburCharacter(const class FObjectInitializer& InitializerObject)
+	: Super(InitializerObject)
 {
 	// Set size for collision capsule
 	GetCapsuleComponent()->InitCapsuleSize(42.f, 96.0f);
