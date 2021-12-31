@@ -22,6 +22,7 @@ protected:
 	/** Follow camera */
 	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Camera, meta = (AllowPrivateAccess = "true"))
 	class UCameraComponent* FollowCamera;
+
 public:
 	AExcaliburCharacter(const class FObjectInitializer& InitializerObject);
 
@@ -36,7 +37,39 @@ public:
 	// Only called on the Server. Calls before Server's AcknowledgePossession.
 	virtual void PossessedBy(AController* NewController) override;
 
-	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const { return nullptr; }
+	virtual UAbilitySystemComponent* GetAbilitySystemComponent() const;
+
+public:
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetMovementSpeed() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetMovementSpeedBaseValue() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetMovementSpeedMultiplier() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetMovementSpeedMultiplierBase() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetJumpHeight() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetJumpHeightMultiplier() const;
+
+	UFUNCTION(BlueprintCallable, Category = "Player|Character|Attributes")
+	float GetAirControl() const;
+
+	UFUNCTION(BlueprintPure, Category = "Player|Component|MovementComponent")
+	bool IsHeroSprinting() const;
+
+	UFUNCTION(BlueprintPure, Category = "Player|Component|MovementComponent")
+	float GetCurrentLevel() const;
+
+	UFUNCTION(BlueprintPure, Category = "Player|Component|MovementComponent")
+	class UHeroCharacterMovementComponent* GetHeroCharacterMovementComponent() const;
+
 protected:
 	/** Called for forwards/backward input */
 	void MoveForward(float Value);
@@ -56,7 +89,6 @@ protected:
 	 */
 	void LookUpAtRate(float Rate);
 
-protected:
 	// APawn interface
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 	// End of APawn interface
@@ -73,5 +105,14 @@ protected:
 
 	// Player Attribute Set
 	TWeakObjectPtr<class UHeroPlayerAttributeSet> PlayerAttributes;
+
+	// Default attributes for a character for initializing on spawn/respawn.
+	// This is an instant GE that overrides the values for attributes that get reset on spawn/respawn.
+	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Player|Abilities")
+	TSubclassOf<class UGameplayEffect> DefaultAttributes;
+
+protected:
+	void GrantAbilityToPlayer(FGameplayAbilitySpec Ability);
+	void GrantAbilitiesToPlayer(TArray<FGameplayAbilitySpec> Abilities);
 };
 

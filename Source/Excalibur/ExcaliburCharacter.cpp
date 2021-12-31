@@ -9,6 +9,7 @@
 #include "GameFramework/SpringArmComponent.h"
 #include "Excalibur/Attributes/HeroPlayerAttributeSet.h"
 #include "Excalibur/Character/HeroPlayerState.h"
+#include "Character/MovementComp/HeroCharacterMovementComponent.h"
 
 //////////////////////////////////////////////////////////////////////////
 // AExcaliburCharacter
@@ -67,6 +68,136 @@ void AExcaliburCharacter::PossessedBy(AController* NewController)
 
 		PlayerAttributes = PS->GetAttributeSetBase();
 		PS->InitializeAttributes();
+	}
+}
+
+//////////////////////////////////////////////////////////////////////////
+// Getters
+
+UAbilitySystemComponent* AExcaliburCharacter::GetAbilitySystemComponent() const
+{
+	if (AbilitySystemComponent.Get())
+		return AbilitySystemComponent.Get();
+
+	return nullptr;
+}
+
+float AExcaliburCharacter::GetMovementSpeed() const
+{
+	if (PlayerAttributes.IsValid())
+	{
+		return PlayerAttributes->GetPlayerMovementSpeed();
+	}
+	return 0.0f;
+}
+
+float AExcaliburCharacter::GetMovementSpeedBaseValue() const
+{
+	if (PlayerAttributes.IsValid())
+	{
+		return PlayerAttributes->GetPlayerMovementSpeedAttribute().GetGameplayAttributeData(PlayerAttributes.Get())->GetBaseValue();
+	}
+	return 0.0f;
+}
+
+float AExcaliburCharacter::GetMovementSpeedMultiplier() const
+{
+	if (PlayerAttributes.IsValid())
+	{
+		return PlayerAttributes->GetPlayerMovementMultiplier();
+	}
+	return 0.0f;
+}
+
+float AExcaliburCharacter::GetMovementSpeedMultiplierBase() const
+{
+	if (PlayerAttributes.IsValid())
+	{
+		return PlayerAttributes->GetPlayerMovementMultiplierAttribute().GetGameplayAttributeData(PlayerAttributes.Get())->GetBaseValue();
+	}
+	return 0.0f;
+}
+
+float AExcaliburCharacter::GetJumpHeight() const
+{
+	if (PlayerAttributes.IsValid())
+	{
+		return PlayerAttributes->GetPlayerJumpHeight();
+	}
+	return 0.0f;
+}
+
+float AExcaliburCharacter::GetJumpHeightMultiplier() const
+{
+	if (PlayerAttributes.IsValid())
+	{
+		return PlayerAttributes->GetPlayerJumpHeightMultiplier();
+	}
+	return 0.0f;
+}
+
+float AExcaliburCharacter::GetAirControl() const
+{
+	if (PlayerAttributes.IsValid())
+	{
+		return PlayerAttributes->GetPlayerAirControl();
+	}
+	return 0.0f;
+}
+
+bool AExcaliburCharacter::IsHeroSprinting() const
+{
+	return false;
+}
+
+float AExcaliburCharacter::GetCurrentLevel() const
+{
+	return 1.0f;
+}
+
+UHeroCharacterMovementComponent* AExcaliburCharacter::GetHeroCharacterMovementComponent() const
+{
+	UHeroCharacterMovementComponent* MovementComponent = Cast<UHeroCharacterMovementComponent>(GetCharacterMovement());
+	if (MovementComponent)
+		return MovementComponent;
+
+	return nullptr;
+}
+
+void AExcaliburCharacter::GrantAbilityToPlayer(FGameplayAbilitySpec Ability)
+{
+	if (!AbilitySystemComponent.IsValid())
+	{
+		return;
+	}
+
+	if (!Ability.Ability)
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s() Ability Not Granted for %s. Ability is not valid."), *FString(__FUNCTION__), *GetName());
+		return;
+	}
+
+	AbilitySystemComponent->GiveAbility(Ability);
+}
+
+void AExcaliburCharacter::GrantAbilitiesToPlayer(TArray<FGameplayAbilitySpec> Abilities)
+{
+	if (!AbilitySystemComponent.IsValid())
+	{
+		return;
+	}
+
+	for (FGameplayAbilitySpec Ability : Abilities)
+	{
+		if (!Ability.Ability)
+		{
+			UE_LOG(LogTemp, Error, TEXT("%s() Ability Not Granted for %s. Ability is not valid--."), *FString(__FUNCTION__), *GetName());
+			return;
+		}
+		else
+		{
+			AbilitySystemComponent->GiveAbility(Ability);
+		}
 	}
 }
 
