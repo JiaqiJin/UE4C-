@@ -2,11 +2,12 @@
 
 
 #include "HeroPlayerController.h"
+#include "Excalibur/Data/HeroCheatManager.h"
 
 AHeroPlayerController::AHeroPlayerController(const class FObjectInitializer& InitializerObject)
 	: Super(InitializerObject)
 {
-
+	CheatClass = UHeroCheatManager::StaticClass();
 }
 
 void AHeroPlayerController::OnPossess(APawn* aPawn)

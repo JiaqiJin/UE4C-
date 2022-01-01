@@ -7,6 +7,7 @@
 #include "AbilitySystemInterface.h"
 #include "AbilitySystemComponent.h"
 #include "Abilities/GameplayAbility.h"
+#include "Data/HeroAbilityDataAsset.h"
 #include "ExcaliburCharacter.generated.h"
 
 UCLASS()
@@ -70,6 +71,8 @@ public:
 	UFUNCTION(BlueprintPure, Category = "Player|Component|MovementComponent")
 	class UHeroCharacterMovementComponent* GetHeroCharacterMovementComponent() const;
 
+	FORCEINLINE UHeroAbilityDataAsset* GetDefaultAbilityDataAsset() const { return DefaultAbilities; }
+
 protected:
 	/** Called for forwards/backward input */
 	void MoveForward(float Value);
@@ -111,7 +114,11 @@ protected:
 	UPROPERTY(BlueprintReadOnly, EditAnywhere, Category = "Player|Abilities")
 	TSubclassOf<class UGameplayEffect> DefaultAttributes;
 
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player|Data")
+	UHeroAbilityDataAsset* DefaultAbilities;
+
 protected:
+	void ApplyDefaultAbilities();
 	void GrantAbilityToPlayer(FGameplayAbilitySpec Ability);
 	void GrantAbilitiesToPlayer(TArray<FGameplayAbilitySpec> Abilities);
 };

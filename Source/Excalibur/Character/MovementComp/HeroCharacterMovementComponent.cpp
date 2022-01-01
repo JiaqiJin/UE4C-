@@ -12,5 +12,13 @@ UHeroCharacterMovementComponent::UHeroCharacterMovementComponent()
 
 float UHeroCharacterMovementComponent::GetMaxSpeed() const
 {
-	return 600.0f;
+	AHeroPlayerCharacter* Character = Cast<AHeroPlayerCharacter>(GetOwner());
+	if (!Character)
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s() No Owner"), *FString(__FUNCTION__));
+		return Super::GetMaxSpeed();
+	}
+
+	float MovementSpeedMultiplier = Character->GetMovementSpeedMultiplier();
+	return Character->GetMovementSpeed() * MovementSpeedMultiplier;
 }

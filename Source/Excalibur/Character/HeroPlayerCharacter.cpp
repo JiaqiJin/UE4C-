@@ -30,5 +30,10 @@ void AHeroPlayerCharacter::SetupPlayerInputComponent(UInputComponent* PlayerInpu
 {
 	Super::SetupPlayerInputComponent(PlayerInputComponent);
 
+	// Bind to AbilitySystemComponent
+	AbilitySystemComponent->BindAbilityActivationToInputComponent(InputComponent, 
+		FGameplayAbilityInputBinds(FString("ConfirmTarget"),
+		FString("CancelTarget"), FString("EHeroAbilityInputID"), 
+		static_cast<int32>(EHeroAbilityInputID::Type::Confirm), static_cast<int32>(EHeroAbilityInputID::Type::Cancel)));
 }
 

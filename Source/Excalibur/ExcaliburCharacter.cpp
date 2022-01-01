@@ -29,11 +29,14 @@ AExcaliburCharacter::AExcaliburCharacter(const class FObjectInitializer& Initial
 	bUseControllerRotationYaw = false;
 	bUseControllerRotationRoll = false;
 
-	// Configure character movement
-	GetCharacterMovement()->bOrientRotationToMovement = true; // Character moves in the direction of input...	
-	GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f); // ...at this rotation rate
-	GetCharacterMovement()->JumpZVelocity = 600.f;
-	GetCharacterMovement()->AirControl = 0.2f;
+	UHeroCharacterMovementComponent* MovementComponent = Cast<UHeroCharacterMovementComponent>(GetCharacterMovement());
+	if (MovementComponent)
+	{
+		GetCharacterMovement()->bOrientRotationToMovement = true; // Character moves in the direction of input...	
+		GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f); // ...at this rotation rate
+	/*	GetCharacterMovement()->JumpZVelocity = 600.f;
+		GetCharacterMovement()->AirControl = 0.2f;*/
+	}
 
 	// Create a camera boom (pulls in towards the player if there is a collision)
 	CameraBoom = CreateDefaultSubobject<USpringArmComponent>(TEXT("CameraBoom"));
@@ -46,8 +49,11 @@ AExcaliburCharacter::AExcaliburCharacter(const class FObjectInitializer& Initial
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); // Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
 
-	// Note: The skeletal mesh and anim blueprint references on the Mesh component (inherited from Character) 
-	// are set in the derived blueprint asset named MyCharacter (to avoid direct content references in C++)
+	//// Bind to AbilitySystemComponent
+	//AbilitySystemComponent->BindAbilityActivationToInputComponent(InputComponent, 
+	//	FGameplayAbilityInputBinds(FString("ConfirmTarget"),
+	//	FString("CancelTarget"), FString("EHeroAbilityInputID"), 
+	//		static_cast<int32>(EHeroAbilityInputID::Type::Confirm), static_cast<int32>(EHeroAbilityInputID::Type::Cancel)));
 }
 
 // Only called on the Server. Calls before Server's AcknowledgePossession.
@@ -68,6 +74,22 @@ void AExcaliburCharacter::PossessedBy(AController* NewController)
 
 		PlayerAttributes = PS->GetAttributeSetBase();
 		PS->InitializeAttributes();
+
+		ApplyDefaultAbilities();
+	}
+}
+
+void AExcaliburCharacter::ApplyDefaultAbilities()
+{
+	if (!DefaultAbilities)
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s() Missing DefaultAbility for %s. Please fill in the character's Blueprint."), *FString(__FUNCTION__), *GetName());
+		return;
+	}
+
+	for (FHeroGameplayAbilityBindInfo Ability : DefaultAbilities->Abilities)
+	{
+		GrantAbilityToPlayer(FGameplayAbilitySpec(Ability.HeroAbilities, 1, static_cast<uint32>(Ability.Command), this));
 	}
 }
 
