@@ -34,8 +34,8 @@ AExcaliburCharacter::AExcaliburCharacter(const class FObjectInitializer& Initial
 	{
 		GetCharacterMovement()->bOrientRotationToMovement = true; // Character moves in the direction of input...	
 		GetCharacterMovement()->RotationRate = FRotator(0.0f, 540.0f, 0.0f); // ...at this rotation rate
-	/*	GetCharacterMovement()->JumpZVelocity = 600.f;
-		GetCharacterMovement()->AirControl = 0.2f;*/
+		GetCharacterMovement()->JumpZVelocity = 600.f;
+		GetCharacterMovement()->AirControl = 0.2f;
 	}
 
 	// Create a camera boom (pulls in towards the player if there is a collision)
@@ -48,12 +48,6 @@ AExcaliburCharacter::AExcaliburCharacter(const class FObjectInitializer& Initial
 	FollowCamera = CreateDefaultSubobject<UCameraComponent>(TEXT("FollowCamera"));
 	FollowCamera->SetupAttachment(CameraBoom, USpringArmComponent::SocketName); // Attach the camera to the end of the boom and let the boom adjust to match the controller orientation
 	FollowCamera->bUsePawnControlRotation = false; // Camera does not rotate relative to arm
-
-	//// Bind to AbilitySystemComponent
-	//AbilitySystemComponent->BindAbilityActivationToInputComponent(InputComponent, 
-	//	FGameplayAbilityInputBinds(FString("ConfirmTarget"),
-	//	FString("CancelTarget"), FString("EHeroAbilityInputID"), 
-	//		static_cast<int32>(EHeroAbilityInputID::Type::Confirm), static_cast<int32>(EHeroAbilityInputID::Type::Cancel)));
 }
 
 // Only called on the Server. Calls before Server's AcknowledgePossession.
@@ -76,6 +70,14 @@ void AExcaliburCharacter::PossessedBy(AController* NewController)
 		PS->InitializeAttributes();
 
 		ApplyDefaultAbilities();
+
+		UHeroCharacterMovementComponent* MovementComponent = Cast<UHeroCharacterMovementComponent>(GetCharacterMovement());
+		if(MovementComponent)
+		{
+			MovementComponent->SetJumpZVelocity(MovementComponent->JumpZVelocity);
+		}
+
+		//UE_LOG(LogTemp, Warning, TEXT("The integer value is: %f"), PlayerAttributes->GetPlayerJumpHeight());
 	}
 }
 
@@ -230,8 +232,8 @@ void AExcaliburCharacter::SetupPlayerInputComponent(class UInputComponent* Playe
 {
 	// Set up gameplay key bindings
 	check(PlayerInputComponent);
-	PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
-	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);
+	/*PlayerInputComponent->BindAction("Jump", IE_Pressed, this, &ACharacter::Jump);
+	PlayerInputComponent->BindAction("Jump", IE_Released, this, &ACharacter::StopJumping);*/
 
 	PlayerInputComponent->BindAxis("MoveForward", this, &AExcaliburCharacter::MoveForward);
 	PlayerInputComponent->BindAxis("MoveRight", this, &AExcaliburCharacter::MoveRight);

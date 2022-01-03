@@ -20,6 +20,11 @@ public:
 
 	virtual float GetMaxSpeed() const override;
 
+	virtual float GetMaxJumpHeight() const;
+
+	virtual float GetMaxJumpHeightWithJumpTime() const;
+
+	void SetJumpZVelocity(float NewValue);
 public:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hero|Component|MovementComponent")
 	bool isSprinting;
