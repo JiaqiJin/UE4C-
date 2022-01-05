@@ -26,7 +26,7 @@ AExcaliburCharacter::AExcaliburCharacter(const class FObjectInitializer& Initial
 
 	// Don't rotate when the controller rotates. Let that just affect the camera.
 	bUseControllerRotationPitch = false;
-	bUseControllerRotationYaw = false;
+	bUseControllerRotationYaw = true;
 	bUseControllerRotationRoll = false;
 
 	UHeroCharacterMovementComponent* MovementComponent = Cast<UHeroCharacterMovementComponent>(GetCharacterMovement());
@@ -171,6 +171,12 @@ float AExcaliburCharacter::GetAirControl() const
 
 bool AExcaliburCharacter::IsHeroSprinting() const
 {
+	UHeroCharacterMovementComponent* MovementComponent = Cast<UHeroCharacterMovementComponent>(GetCharacterMovement());
+	if (MovementComponent)
+	{
+		return MovementComponent->isSprinting;
+	}
+
 	return false;
 }
 

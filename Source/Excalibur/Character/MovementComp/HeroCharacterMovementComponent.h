@@ -25,8 +25,12 @@ public:
 	virtual float GetMaxJumpHeightWithJumpTime() const;
 
 	void SetJumpZVelocity(float NewValue);
+	
+	UFUNCTION(BlueprintCallable, Category = "Hero|Component|MovementComponent")
+	void SetSprinting(bool bNewSprint) { isSprinting = bNewSprint; }
+
 public:
-	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Hero|Component|MovementComponent")
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Character Movement : Sprint")
 	bool isSprinting;
 
 private:
