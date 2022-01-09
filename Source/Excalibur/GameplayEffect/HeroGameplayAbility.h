@@ -17,7 +17,8 @@ class EXCALIBUR_API UHeroGameplayAbility : public UGameplayAbility
 public:
 	UHeroGameplayAbility();
 
-	class AExcaliburCharacter* GetAvatarActorFromActorInfo() const;
+	UFUNCTION(BlueprintCallable, Category = Ability)
+	class AExcaliburCharacter* GetOwningHeroCharacter() const;
 
 protected:
 

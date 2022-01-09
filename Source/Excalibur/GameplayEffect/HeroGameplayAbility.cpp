@@ -11,7 +11,7 @@ UHeroGameplayAbility::UHeroGameplayAbility()
 	InstancingPolicy = EGameplayAbilityInstancingPolicy::InstancedPerActor;
 }
 
-AExcaliburCharacter* UHeroGameplayAbility::GetAvatarActorFromActorInfo() const
+AExcaliburCharacter* UHeroGameplayAbility::GetOwningHeroCharacter() const
 {
 	AHeroPlayerState* PS = Cast<AHeroPlayerState>(GetOwningActorFromActorInfo());
 	if (PS)
