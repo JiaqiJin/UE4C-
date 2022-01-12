@@ -10,7 +10,6 @@
 UHeroCharacterMovementComponent::UHeroCharacterMovementComponent()
 {
 	NavAgentProps.bCanCrouch = true;
-	//SetJumpZVelocity(JumpZVelocity);
 }
 
 float UHeroCharacterMovementComponent::GetMaxSpeed() const

@@ -24,11 +24,21 @@ namespace EHeroAbilityInputID
 		Ability2		UMETA(DisplayName = "Ability2"),
 		// 6 NUM 3
 		Ability3		UMETA(DisplayName = "Ability3"),
-		// 7 Jump SpaceBar
+		// No Jump
 		Jump			UMETA(DisplayName = "Jump"),
-		// 8 Sprint
+		// Left Shift
 		Sprint			UMETA(DisplayName = "Sprint"),
-		// 8 Sprint
+		// Space
 		Evade			UMETA(DisplayName = "Evade"),
+		// S
+		BackSideStep	UMETA(DisplayName = "Back Side Step"),
+		// A
+		LeftSideStep	UMETA(DisplayName = "Left Side Step"),
+		// D
+		RightSideStep	UMETA(DisplayName = "Right Side Step"),
+		// 1
+		FeatherFall	    UMETA(DisplayName = "FeatherFall"),
+		// Ctr
+		Crouch			UMETA(DisplayName = "Crouch"),
 	};
 }
