@@ -1,0 +1,14 @@
+{
+	"Targets": [
+		{
+			"Name": "Excalibur",
+			"Path": "E:\\VisualStudio\\UE4C_PlusPlus\\Excalibur\\Source\\Excalibur.Target.cs",
+			"Type": "Game"
+		},
+		{
+			"Name": "ExcaliburEditor",
+			"Path": "E:\\VisualStudio\\UE4C_PlusPlus\\Excalibur\\Source\\ExcaliburEditor.Target.cs",
+			"Type": "Editor"
+		}
+	]
+}

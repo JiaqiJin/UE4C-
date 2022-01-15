@@ -1,0 +1,8 @@
+{
+	"SourceFiles": [
+		"E:\\VisualStudio\\UE4C_PlusPlus\\Excalibur\\Source\\Excalibur\\Excalibur.Build.cs",
+		"E:\\VisualStudio\\UE4C_PlusPlus\\Excalibur\\Source\\Excalibur.Target.cs",
+		"E:\\VisualStudio\\UE4C_PlusPlus\\Excalibur\\Source\\ExcaliburEditor.Target.cs"
+	],
+	"EngineVersion": "4.26.2"
+}
