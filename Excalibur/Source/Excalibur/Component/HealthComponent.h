@@ -5,6 +5,7 @@
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
 #include "GameplayEffectTypes.h"
+#include "../UI/Component/CharacterHealthWidget.h"
 #include "HealthComponent.generated.h"
 
 
@@ -35,4 +36,13 @@ protected:
 
 	void InitializeHealthAttribute(class AHeroPlayerState* PS);
 	void BindHealthAttributeChange(class AHeroPlayerCharacter* HeroCharacter);
+
+	void UpdateHealthBarPercent();
+	void UpdateHealthBarText();
+
+	void UpdateHealthRegenerationBarText();
+	void UpdateRegenerationVisibility();
+
+protected:
+
 };

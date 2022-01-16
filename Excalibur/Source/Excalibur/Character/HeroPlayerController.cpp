@@ -4,6 +4,7 @@
 #include "HeroPlayerController.h"
 #include "Excalibur/Data/HeroCheatManager.h"
 
+
 AHeroPlayerController::AHeroPlayerController(const class FObjectInitializer& InitializerObject)
 	: Super(InitializerObject)
 {
@@ -13,4 +14,13 @@ AHeroPlayerController::AHeroPlayerController(const class FObjectInitializer& Ini
 void AHeroPlayerController::OnPossess(APawn* aPawn)
 {
 	Super::OnPossess(aPawn);
+	
+	if (HeroMainUI)
+	{
+		HeroMainWidget = CreateWidget<UHeroCharacterUIMain>(GetGameInstance(), HeroMainUI);
+		if (HeroMainWidget)
+		{
+			HeroMainWidget->AddToViewport();
+		}
+	}
 }

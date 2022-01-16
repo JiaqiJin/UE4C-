@@ -7,6 +7,8 @@
 #include "../Character/HeroPlayerCharacter.h"
 #include "../Character/HeroPlayerState.h"
 #include "../Attributes/HeroPlayerAttributeSet.h"
+#include "../Character/HeroPlayerController.h"
+#include "../UI/HeroCharacterUIMain.h"
 
 // Sets default values for this component's properties
 UHealthComponent::UHealthComponent()
@@ -30,6 +32,7 @@ void UHealthComponent::BeginPlay()
 	InitializeHealthAttribute(PS);
 
 	BindHealthAttributeChange(PlayerCharacter);
+
 }
 
 void UHealthComponent::HealthChanged(const FOnAttributeChangeData& Data)
@@ -56,7 +59,13 @@ void UHealthComponent::InitializeHealthAttribute(class AHeroPlayerState* PS)
 			MaxHealth = PlayerAttributes->GetMaxHealth();
 			Health = MaxHealth;
 			PlayerAttributes->InitHealth(Health);
-			UE_LOG(LogTemp, Warning, TEXT("Max health : %f, Health : %f"), MaxHealth, Health);
+
+			//UE_LOG(LogTemp, Warning, TEXT("Max health : %f, Health : %f"), MaxHealth, Health);
+
+			UpdateHealthBarPercent();
+			UpdateHealthBarText();
+			UpdateHealthRegenerationBarText();
+			UpdateRegenerationVisibility();
 		}
 	}
 }
@@ -74,4 +83,33 @@ void UHealthComponent::BindHealthAttributeChange(class AHeroPlayerCharacter* Pla
 				&UHealthComponent::MaxHealthChanged);
 		}
 	}
+}
+
+void UHealthComponent::UpdateHealthBarPercent()
+{
+	AHeroPlayerCharacter* HeroCharacter = Cast<AHeroPlayerCharacter>(GetOwner());
+	AHeroPlayerController* HeroController = Cast<AHeroPlayerController>(HeroCharacter->GetController());
+	if (HeroController)
+	{
+		UHeroCharacterUIMain* MainUI = HeroController->GetHeroCharacterUIMain();
+		if (MainUI)
+		{
+			MainUI->SetHealthBarPercentage(Health / MaxHealth);
+		}
+	}
+}
+
+void UHealthComponent::UpdateHealthBarText()
+{
+
+}
+
+void UHealthComponent::UpdateHealthRegenerationBarText()
+{
+
+}
+
+void UHealthComponent::UpdateRegenerationVisibility()
+{
+
 }
