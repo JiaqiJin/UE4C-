@@ -83,3 +83,9 @@ E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\Engine\Classes\Interfaces/Network
 E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\NetworkPredictionInterface.generated.h
 E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CharacterMovementComponent.generated.h
 E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Inc\Excalibur\HeroCharacterMovementComponent.generated.h
+E:\VisualStudio\UE4C_PlusPlus\Excalibur\Source\Excalibur/Component/HealthComponent.h
+E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Inc\Excalibur\HealthComponent.generated.h
+E:\VisualStudio\UE4C_PlusPlus\Excalibur\Source\Excalibur/Component/ManaComponent.h
+E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Inc\Excalibur\ManaComponent.generated.h
+E:\VisualStudio\UE4C_PlusPlus\Excalibur\Source\Excalibur/Component/StaminaComponent.h
+E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Inc\Excalibur\StaminaComponent.generated.h

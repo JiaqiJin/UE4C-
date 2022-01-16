@@ -117,6 +117,15 @@ protected:
 	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player|Data")
 	UHeroAbilityDataAsset* DefaultAbilities;
 
+	// Components
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Component, meta = (AllowPrivateAccess = "true"))
+	class UHealthComponent* HealthComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Component, meta = (AllowPrivateAccess = "true"))
+	class UManaComponent* ManaComponent;
+
+	UPROPERTY(VisibleAnywhere, BlueprintReadOnly, Category = Component, meta = (AllowPrivateAccess = "true"))
+	class UStaminaComponent* StaminaComponent;
 protected:
 	void ApplyDefaultAbilities();
 	void GrantAbilityToPlayer(FGameplayAbilitySpec Ability);

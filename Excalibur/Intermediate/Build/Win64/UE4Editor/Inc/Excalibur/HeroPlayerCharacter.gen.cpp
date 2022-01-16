@@ -73,7 +73,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AHeroPlayerCharacter, 1488328740);
+	IMPLEMENT_CLASS(AHeroPlayerCharacter, 3983899701);
 	template<> EXCALIBUR_API UClass* StaticClass<AHeroPlayerCharacter>()
 	{
 		return AHeroPlayerCharacter::StaticClass();

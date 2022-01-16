@@ -1,0 +1,17 @@
+﻿  Using 'git status' to determine working set for adaptive non-unity build (E:\VisualStudio\UE4C_PlusPlus).
+  Parsing headers for ExcaliburEditor
+    Running UnrealHeaderTool "E:\VisualStudio\UE4C_PlusPlus\Excalibur\Excalibur.uproject" "E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\ExcaliburEditor\Development\ExcaliburEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Usuario\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  Reflection code generated for ExcaliburEditor in 3,4887502 seconds
+  Building ExcaliburEditor...
+  Using Visual Studio 2019 14.29.30136 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
+  Building 6 actions with 12 processes...
+    [1/6] HealthComponent.gen.cpp
+    [2/6] HeroPlayerCharacter.cpp
+    [3/6] HealthComponent.cpp
+    [4/6] UE4Editor-Excalibur-0019.lib
+       Creating library E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0019.lib and object E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0019.exp
+    [5/6] UE4Editor-Excalibur-0019.dll
+       Creating library E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0019.suppressed.lib and object E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0019.suppressed.exp
+    [6/6] ExcaliburEditor.target
+  Total time in Parallel executor: 5,06 seconds
+  Total execution time: 9,29 seconds

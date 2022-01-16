@@ -3,12 +3,16 @@
 
 #include "HeroPlayerCharacter.h"
 #include "MovementComp/HeroCharacterMovementComponent.h"
-
+#include "Excalibur/Component/HealthComponent.h"
+#include "Excalibur/Component/ManaComponent.h"
+#include "Excalibur/Component/StaminaComponent.h"
 // Sets default values
 AHeroPlayerCharacter::AHeroPlayerCharacter(const class FObjectInitializer& InitializerObject)
 	: Super(InitializerObject.SetDefaultSubobjectClass<UHeroCharacterMovementComponent>(ACharacter::CharacterMovementComponentName))
 {
- 	
+	HealthComponent = CreateDefaultSubobject<UHealthComponent>(TEXT("HealthComponent"));
+	ManaComponent = CreateDefaultSubobject<UManaComponent>(TEXT("ManaComponent"));
+	StaminaComponent = CreateDefaultSubobject<UStaminaComponent>(TEXT("StaminaComponent"));
 }
 
 // Called when the game starts or when spawned
