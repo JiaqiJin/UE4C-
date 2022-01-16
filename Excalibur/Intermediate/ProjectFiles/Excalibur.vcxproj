@@ -51,7 +51,7 @@
     </ProjectConfiguration>
   </ItemGroup>
   <PropertyGroup Label="Globals">
-    <ProjectGuid>{03382FCF-A5CE-4636-9346-8905A9CB2B6C}</ProjectGuid>
+    <ProjectGuid>{12D6B38B-683E-4D63-989C-C4BC73C3C405}</ProjectGuid>
     <Keyword>MakeFileProj</Keyword>
     <RootNamespace>Excalibur</RootNamespace>
     <PlatformToolset>v142</PlatformToolset>
