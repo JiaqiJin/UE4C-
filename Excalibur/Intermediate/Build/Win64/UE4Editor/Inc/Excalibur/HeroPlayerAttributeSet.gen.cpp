@@ -108,6 +108,10 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerAttributeSet() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HeroMaxLevel_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FStructPropertyParams NewProp_HeroMaxLevel;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_Damage_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FStructPropertyParams NewProp_Damage;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -275,6 +279,16 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerAttributeSet() {}
 	};
 #endif
 	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_HeroMaxLevel = { "HeroMaxLevel", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHeroPlayerAttributeSet, HeroMaxLevel), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_HeroMaxLevel_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_HeroMaxLevel_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_Damage_MetaData[] = {
+		{ "Category", "HeroPlayerAttributeSet" },
+		{ "Comment", "// Damage Attribute\n" },
+		{ "HideFromLevelInfos", "" },
+		{ "ModuleRelativePath", "Attributes/HeroPlayerAttributeSet.h" },
+		{ "ToolTip", "Damage Attribute" },
+	};
+#endif
+	const UE4CodeGen_Private::FStructPropertyParams Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_Damage = { "Damage", nullptr, (EPropertyFlags)0x0010000000000005, UE4CodeGen_Private::EPropertyGenFlags::Struct, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHeroPlayerAttributeSet, Damage), Z_Construct_UScriptStruct_FGameplayAttributeData, METADATA_PARAMS(Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_Damage_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_Damage_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementSpeed,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_PlayerMovementMultiplier,
@@ -295,6 +309,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerAttributeSet() {}
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_StaminaRegenerationRate,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_HeroLevel,
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_HeroMaxLevel,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::NewProp_Damage,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UHeroPlayerAttributeSet_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UHeroPlayerAttributeSet>::IsAbstract,
@@ -323,7 +338,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerAttributeSet() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UHeroPlayerAttributeSet, 1213599665);
+	IMPLEMENT_CLASS(UHeroPlayerAttributeSet, 2983751583);
 	template<> EXCALIBUR_API UClass* StaticClass<UHeroPlayerAttributeSet>()
 	{
 		return UHeroPlayerAttributeSet::StaticClass();

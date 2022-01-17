@@ -30,6 +30,8 @@ public:
 	// Respond to changes to an Attribute's Current Value before changes happen.
 	void PreAttributeChange(const FGameplayAttribute& Attribute, float& NewValue) override;
 
+	// Only triggers after changes to the BaseValue of an Attribute from an instant GameplayEffect
+	virtual void PostGameplayEffectExecute(const struct FGameplayEffectModCallbackData& Data) override;
 public:
 
 	// Movement Attribute
@@ -118,4 +120,10 @@ public:
 	UPROPERTY(EditAnywhere, BlueprintReadWrite, Category = "Player|Character|Attributes")
 	FGameplayAttributeData HeroMaxLevel;
 	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, HeroMaxLevel);
+
+public:
+	// Damage Attribute
+	UPROPERTY(EditAnywhere, BlueprintReadWrite, meta = (HideFromLevelInfos))
+	FGameplayAttributeData Damage;
+	ATTRIBUTE_ACCESSORS(UHeroPlayerAttributeSet, Damage);
 };

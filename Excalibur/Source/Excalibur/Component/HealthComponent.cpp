@@ -40,6 +40,10 @@ void UHealthComponent::HealthChanged(const FOnAttributeChangeData& Data)
 	float NewValue = Data.NewValue;
 	float OldValue = Data.OldValue;
 
+	Health = NewValue;
+	UpdateHealthBarPercent();
+	UpdateHealthBarText();
+
 	UE_LOG(LogTemp, Warning, TEXT("New Value : %f, Old Value : %f"), NewValue, OldValue)
 }
 
