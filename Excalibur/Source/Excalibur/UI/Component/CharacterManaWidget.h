@@ -13,5 +13,21 @@ UCLASS()
 class EXCALIBUR_API UCharacterManaWidget : public UUserWidget
 {
 	GENERATED_BODY()
-	
+public:
+	bool Initialize() override;
+
+	UPROPERTY(meta = (BindWidget))
+	class UProgressBar* ManaBar;
+
+	UPROPERTY(meta = (BindWidget))
+	class UTextBlock* ManaText;
+
+	UPROPERTY(meta = (BindWidget))
+	class UTextBlock* ManaReg;
+
+public:
+	void SetManaBarPercentage(float value);
+	void SetManaTextBlock(FText ManaTextValue);
+	void SetManaRegenerationValue(FText RegValue);
+	void SetManaRegenerationVisibility(bool bIsVisible);
 };

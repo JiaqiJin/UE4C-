@@ -35,7 +35,7 @@ protected:
 	virtual void MaxHealthChanged(const FOnAttributeChangeData& Data);
 
 	void InitializeHealthAttribute(class AHeroPlayerState* PS);
-	void BindHealthAttributeChange(class AHeroPlayerCharacter* HeroCharacter);
+	void BindHealthAttributeChange();
 
 	void UpdateHealthBarPercent();
 	void UpdateHealthBarText();
@@ -44,5 +44,5 @@ protected:
 	void UpdateRegenerationVisibility();
 
 protected:
-
+	class AHeroPlayerCharacter* PlayerCharacter;
 };

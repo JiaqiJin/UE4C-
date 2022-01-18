@@ -102,3 +102,7 @@ E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserW
 E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Inc\Excalibur\HeroCharacterUIMain.generated.h
 E:\VisualStudio\UE4C_PlusPlus\Excalibur\Source\Excalibur\UI\Component/CharacterHealthWidget.h
 E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Inc\Excalibur\CharacterHealthWidget.generated.h
+E:\VisualStudio\UE4C_PlusPlus\Excalibur\Source\Excalibur\UI\Component/CharacterManaWidget.h
+E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Inc\Excalibur\CharacterManaWidget.generated.h
+E:\VisualStudio\UE4C_PlusPlus\Excalibur\Source\Excalibur\UI\Component/CharacterStaminaWidget.h
+E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Inc\Excalibur\CharacterStaminaWidget.generated.h

@@ -100,3 +100,11 @@ E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\Dynam
 E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\WidgetBlueprintGeneratedClass.generated.h
 E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\UserWidget.generated.h
 E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Inc\Excalibur\CharacterStaminaWidget.generated.h
+E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\UMG\Public\Components/ProgressBar.h
+E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\Slate\Public\Widgets/Notifications/SProgressBar.h
+E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Slate\SProgressBar.generated.h
+E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\ProgressBar.generated.h
+E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\UMG\Public\Components/TextBlock.h
+E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\UMG\Public\Components/TextWidgetTypes.h
+E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\TextWidgetTypes.generated.h
+E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\UMG\TextBlock.generated.h

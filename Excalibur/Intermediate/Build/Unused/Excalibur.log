@@ -1,97 +1,19 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (E:\VisualStudio\UE4C_PlusPlus).
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0002.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0003.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0004.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0005.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0006.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0007.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0008.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0010.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0011.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0013.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0014.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0015.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0017.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0018.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0019.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0020.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0021.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0024.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0025.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0026.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0027.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0028.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0029.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0030.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0031.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0032.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0033.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0034.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0035.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0036.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0037.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0038.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0039.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0041.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0042.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0044.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0045.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0046.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0047.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0048.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0050.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0051.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Binaries\Win64\UE4Editor-Excalibur-0052.dll
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0002.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0003.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0004.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0005.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0006.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0007.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0008.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0010.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0011.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0013.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0014.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0015.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0017.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0018.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0019.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0020.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0021.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0024.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0025.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0026.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0027.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0028.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0029.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0030.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0031.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0032.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0033.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0034.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0035.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0036.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0037.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0038.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0039.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0041.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0042.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0044.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0045.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0046.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0047.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0048.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0050.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0051.lib
-  Deleted hot-reload file: E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0052.lib
+  Parsing headers for ExcaliburEditor
+    Running UnrealHeaderTool "E:\VisualStudio\UE4C_PlusPlus\Excalibur\Excalibur.uproject" "E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\ExcaliburEditor\Development\ExcaliburEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Usuario\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
+  Reflection code generated for ExcaliburEditor in 3,5263426 seconds
   Building ExcaliburEditor...
   Using Visual Studio 2019 14.29.30136 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 3 actions with 12 processes...
-    [1/3] UE4Editor-Excalibur.lib
-       Creating library E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur.lib and object E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur.exp
-    [2/3] UE4Editor-Excalibur.dll
-       Creating library E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur.suppressed.lib and object E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur.suppressed.exp
-    [3/3] ExcaliburEditor.target
-  Total time in Parallel executor: 1,56 seconds
-  Total execution time: 2,95 seconds
+  Building 8 actions with 12 processes...
+    [1/8] ManaComponent.gen.cpp
+    [2/8] StaminaComponent.gen.cpp
+    [3/8] HeroPlayerCharacter.cpp
+    [4/8] StaminaComponent.cpp
+    [5/8] ManaComponent.cpp
+    [6/8] UE4Editor-Excalibur-0010.lib
+       Creating library E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0010.lib and object E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0010.exp
+    [7/8] UE4Editor-Excalibur-0010.dll
+       Creating library E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0010.suppressed.lib and object E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0010.suppressed.exp
+    [8/8] ExcaliburEditor.target
+  Total time in Parallel executor: 7,71 seconds
+  Total execution time: 12,03 seconds

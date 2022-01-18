@@ -4,6 +4,7 @@
 
 #include "CoreMinimal.h"
 #include "Components/ActorComponent.h"
+#include "GameplayEffectTypes.h"
 #include "ManaComponent.generated.h"
 
 
@@ -20,9 +21,27 @@ protected:
 	// Called when the game starts
 	virtual void BeginPlay() override;
 
-public:	
-	// Called every frame
-	virtual void TickComponent(float DeltaTime, ELevelTick TickType, FActorComponentTickFunction* ThisTickFunction) override;
+private:
+	float Mana = 0;
+	float MaxMana = 0;
 
-		
+	FDelegateHandle ManaChangedDelegateHandle;
+protected:
+	TWeakObjectPtr<class UHeroPlayerAttributeSet> PlayerAttributes;
+	TWeakObjectPtr<class UAbilitySystemComponent> AbilitySystemComponent;
+
+	virtual void ManaChanged(const FOnAttributeChangeData& Data);
+	virtual void MaxManaChanged(const FOnAttributeChangeData& Data);
+
+	void InitializeManaAttribute(class AHeroPlayerState* PS);
+	void BindManaAttributeChange();
+
+	void UpdateManaBarPercent();
+	void UpdateManaBarText();
+
+	void UpdateManaRegenerationBarText();
+	void UpdateRegenerationVisibility();
+
+protected:
+	class AHeroPlayerCharacter* PlayerCharacter;
 };

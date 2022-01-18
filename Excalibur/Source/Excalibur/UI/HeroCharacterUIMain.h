@@ -20,9 +20,28 @@ public:
 	UPROPERTY(meta = (BindWidget))
 	class UCharacterHealthWidget* HeroHealth;
 
+	UPROPERTY(meta = (BindWidget))
+	class UCharacterManaWidget* HeroMana;
+
+	UPROPERTY(meta = (BindWidget))
+	class UCharacterStaminaWidget* HeroStamina;
 public:
+	// Health
 	void SetHealthBarPercentage(float value);
 	void SetHealthTextBlock(float health, float MaxHealth);
 	void SetHealthRegenerationValue(float HealthRegeneration);
 	void SetHealthRegenerationVisibility(bool Visible);
+
+	//Mana
+	void SetManaBarPercentage(float value);
+	void SetManaTextBlock(float health, float MaxHealth);
+	void SetManaRegenerationValue(float HealthRegeneration);
+	void SetManaRegenerationVisibility(bool Visible);
+
+	// Stamina
+	void SetStaminaBarPercentage(float value);
+	void SetStaminaTextBlock(float health, float MaxHealth);
+	void SetStaminaRegenerationValue(float HealthRegeneration);
+	void SetStaminaRegenerationVisibility(bool Visible);
+
 };

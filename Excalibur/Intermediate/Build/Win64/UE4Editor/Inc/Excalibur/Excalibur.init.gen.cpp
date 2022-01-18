@@ -21,7 +21,7 @@ void EmptyLinkFunctionForGeneratedCodeExcalibur_init() {}
 				nullptr,
 				0,
 				PKG_CompiledIn | 0x00000000,
-				0xAF3739FA,
+				0x5957683A,
 				0x394658E5,
 				METADATA_PARAMS(nullptr, 0)
 			};

@@ -17,6 +17,8 @@ void EmptyLinkFunctionForGeneratedCodeCharacterManaWidget() {}
 	EXCALIBUR_API UClass* Z_Construct_UClass_UCharacterManaWidget();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget();
 	UPackage* Z_Construct_UPackage__Script_Excalibur();
+	UMG_API UClass* Z_Construct_UClass_UProgressBar_NoRegister();
+	UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 // End Cross Module References
 	void UCharacterManaWidget::StaticRegisterNativesUCharacterManaWidget()
 	{
@@ -31,6 +33,19 @@ void EmptyLinkFunctionForGeneratedCodeCharacterManaWidget() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ManaBar_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ManaBar;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ManaText_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ManaText;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_ManaReg_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_ManaReg;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -45,6 +60,35 @@ void EmptyLinkFunctionForGeneratedCodeCharacterManaWidget() {}
 		{ "ModuleRelativePath", "UI/Component/CharacterManaWidget.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterManaWidget_Statics::NewProp_ManaBar_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Component/CharacterManaWidget.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCharacterManaWidget_Statics::NewProp_ManaBar = { "ManaBar", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterManaWidget, ManaBar), Z_Construct_UClass_UProgressBar_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCharacterManaWidget_Statics::NewProp_ManaBar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterManaWidget_Statics::NewProp_ManaBar_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterManaWidget_Statics::NewProp_ManaText_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Component/CharacterManaWidget.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCharacterManaWidget_Statics::NewProp_ManaText = { "ManaText", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterManaWidget, ManaText), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCharacterManaWidget_Statics::NewProp_ManaText_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterManaWidget_Statics::NewProp_ManaText_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterManaWidget_Statics::NewProp_ManaReg_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Component/CharacterManaWidget.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCharacterManaWidget_Statics::NewProp_ManaReg = { "ManaReg", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterManaWidget, ManaReg), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCharacterManaWidget_Statics::NewProp_ManaReg_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterManaWidget_Statics::NewProp_ManaReg_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCharacterManaWidget_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterManaWidget_Statics::NewProp_ManaBar,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterManaWidget_Statics::NewProp_ManaText,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterManaWidget_Statics::NewProp_ManaReg,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UCharacterManaWidget_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UCharacterManaWidget>::IsAbstract,
 	};
@@ -54,11 +98,11 @@ void EmptyLinkFunctionForGeneratedCodeCharacterManaWidget() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_UCharacterManaWidget_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterManaWidget_Statics::PropPointers),
 		0,
 		0x00B010A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UCharacterManaWidget_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterManaWidget_Statics::Class_MetaDataParams))
@@ -72,7 +116,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterManaWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCharacterManaWidget, 1794253787);
+	IMPLEMENT_CLASS(UCharacterManaWidget, 2166677414);
 	template<> EXCALIBUR_API UClass* StaticClass<UCharacterManaWidget>()
 	{
 		return UCharacterManaWidget::StaticClass();

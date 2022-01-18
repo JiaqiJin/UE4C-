@@ -13,10 +13,10 @@ PRAGMA_DISABLE_DEPRECATION_WARNINGS
 #endif
 #define EXCALIBUR_ManaComponent_generated_h
 
-#define Excalibur_Source_Excalibur_Component_ManaComponent_h_13_SPARSE_DATA
-#define Excalibur_Source_Excalibur_Component_ManaComponent_h_13_RPC_WRAPPERS
-#define Excalibur_Source_Excalibur_Component_ManaComponent_h_13_RPC_WRAPPERS_NO_PURE_DECLS
-#define Excalibur_Source_Excalibur_Component_ManaComponent_h_13_INCLASS_NO_PURE_DECLS \
+#define Excalibur_Source_Excalibur_Component_ManaComponent_h_14_SPARSE_DATA
+#define Excalibur_Source_Excalibur_Component_ManaComponent_h_14_RPC_WRAPPERS
+#define Excalibur_Source_Excalibur_Component_ManaComponent_h_14_RPC_WRAPPERS_NO_PURE_DECLS
+#define Excalibur_Source_Excalibur_Component_ManaComponent_h_14_INCLASS_NO_PURE_DECLS \
 private: \
 	static void StaticRegisterNativesUManaComponent(); \
 	friend struct Z_Construct_UClass_UManaComponent_Statics; \
@@ -25,7 +25,7 @@ public: \
 	DECLARE_SERIALIZER(UManaComponent)
 
 
-#define Excalibur_Source_Excalibur_Component_ManaComponent_h_13_INCLASS \
+#define Excalibur_Source_Excalibur_Component_ManaComponent_h_14_INCLASS \
 private: \
 	static void StaticRegisterNativesUManaComponent(); \
 	friend struct Z_Construct_UClass_UManaComponent_Statics; \
@@ -34,7 +34,7 @@ public: \
 	DECLARE_SERIALIZER(UManaComponent)
 
 
-#define Excalibur_Source_Excalibur_Component_ManaComponent_h_13_STANDARD_CONSTRUCTORS \
+#define Excalibur_Source_Excalibur_Component_ManaComponent_h_14_STANDARD_CONSTRUCTORS \
 	/** Standard constructor, called after all reflected properties have been initialized */ \
 	NO_API UManaComponent(const FObjectInitializer& ObjectInitializer); \
 	DEFINE_DEFAULT_OBJECT_INITIALIZER_CONSTRUCTOR_CALL(UManaComponent) \
@@ -47,7 +47,7 @@ private: \
 public:
 
 
-#define Excalibur_Source_Excalibur_Component_ManaComponent_h_13_ENHANCED_CONSTRUCTORS \
+#define Excalibur_Source_Excalibur_Component_ManaComponent_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 	/** Private move- and copy-constructors, should never be used */ \
 	NO_API UManaComponent(UManaComponent&&); \
@@ -58,28 +58,28 @@ DEFINE_VTABLE_PTR_HELPER_CTOR_CALLER(UManaComponent); \
 	DEFINE_DEFAULT_CONSTRUCTOR_CALL(UManaComponent)
 
 
-#define Excalibur_Source_Excalibur_Component_ManaComponent_h_13_PRIVATE_PROPERTY_OFFSET
-#define Excalibur_Source_Excalibur_Component_ManaComponent_h_10_PROLOG
-#define Excalibur_Source_Excalibur_Component_ManaComponent_h_13_GENERATED_BODY_LEGACY \
+#define Excalibur_Source_Excalibur_Component_ManaComponent_h_14_PRIVATE_PROPERTY_OFFSET
+#define Excalibur_Source_Excalibur_Component_ManaComponent_h_11_PROLOG
+#define Excalibur_Source_Excalibur_Component_ManaComponent_h_14_GENERATED_BODY_LEGACY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Excalibur_Source_Excalibur_Component_ManaComponent_h_13_PRIVATE_PROPERTY_OFFSET \
-	Excalibur_Source_Excalibur_Component_ManaComponent_h_13_SPARSE_DATA \
-	Excalibur_Source_Excalibur_Component_ManaComponent_h_13_RPC_WRAPPERS \
-	Excalibur_Source_Excalibur_Component_ManaComponent_h_13_INCLASS \
-	Excalibur_Source_Excalibur_Component_ManaComponent_h_13_STANDARD_CONSTRUCTORS \
+	Excalibur_Source_Excalibur_Component_ManaComponent_h_14_PRIVATE_PROPERTY_OFFSET \
+	Excalibur_Source_Excalibur_Component_ManaComponent_h_14_SPARSE_DATA \
+	Excalibur_Source_Excalibur_Component_ManaComponent_h_14_RPC_WRAPPERS \
+	Excalibur_Source_Excalibur_Component_ManaComponent_h_14_INCLASS \
+	Excalibur_Source_Excalibur_Component_ManaComponent_h_14_STANDARD_CONSTRUCTORS \
 public: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 
 
-#define Excalibur_Source_Excalibur_Component_ManaComponent_h_13_GENERATED_BODY \
+#define Excalibur_Source_Excalibur_Component_ManaComponent_h_14_GENERATED_BODY \
 PRAGMA_DISABLE_DEPRECATION_WARNINGS \
 public: \
-	Excalibur_Source_Excalibur_Component_ManaComponent_h_13_PRIVATE_PROPERTY_OFFSET \
-	Excalibur_Source_Excalibur_Component_ManaComponent_h_13_SPARSE_DATA \
-	Excalibur_Source_Excalibur_Component_ManaComponent_h_13_RPC_WRAPPERS_NO_PURE_DECLS \
-	Excalibur_Source_Excalibur_Component_ManaComponent_h_13_INCLASS_NO_PURE_DECLS \
-	Excalibur_Source_Excalibur_Component_ManaComponent_h_13_ENHANCED_CONSTRUCTORS \
+	Excalibur_Source_Excalibur_Component_ManaComponent_h_14_PRIVATE_PROPERTY_OFFSET \
+	Excalibur_Source_Excalibur_Component_ManaComponent_h_14_SPARSE_DATA \
+	Excalibur_Source_Excalibur_Component_ManaComponent_h_14_RPC_WRAPPERS_NO_PURE_DECLS \
+	Excalibur_Source_Excalibur_Component_ManaComponent_h_14_INCLASS_NO_PURE_DECLS \
+	Excalibur_Source_Excalibur_Component_ManaComponent_h_14_ENHANCED_CONSTRUCTORS \
 private: \
 PRAGMA_ENABLE_DEPRECATION_WARNINGS
 

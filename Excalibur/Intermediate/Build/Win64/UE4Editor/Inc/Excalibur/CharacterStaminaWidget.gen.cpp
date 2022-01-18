@@ -17,6 +17,8 @@ void EmptyLinkFunctionForGeneratedCodeCharacterStaminaWidget() {}
 	EXCALIBUR_API UClass* Z_Construct_UClass_UCharacterStaminaWidget();
 	UMG_API UClass* Z_Construct_UClass_UUserWidget();
 	UPackage* Z_Construct_UPackage__Script_Excalibur();
+	UMG_API UClass* Z_Construct_UClass_UProgressBar_NoRegister();
+	UMG_API UClass* Z_Construct_UClass_UTextBlock_NoRegister();
 // End Cross Module References
 	void UCharacterStaminaWidget::StaticRegisterNativesUCharacterStaminaWidget()
 	{
@@ -31,6 +33,19 @@ void EmptyLinkFunctionForGeneratedCodeCharacterStaminaWidget() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StaminaBar_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_StaminaBar;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StaminaText_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_StaminaText;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_StaminaReg_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_StaminaReg;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -45,6 +60,35 @@ void EmptyLinkFunctionForGeneratedCodeCharacterStaminaWidget() {}
 		{ "ModuleRelativePath", "UI/Component/CharacterStaminaWidget.h" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterStaminaWidget_Statics::NewProp_StaminaBar_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Component/CharacterStaminaWidget.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCharacterStaminaWidget_Statics::NewProp_StaminaBar = { "StaminaBar", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterStaminaWidget, StaminaBar), Z_Construct_UClass_UProgressBar_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCharacterStaminaWidget_Statics::NewProp_StaminaBar_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterStaminaWidget_Statics::NewProp_StaminaBar_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterStaminaWidget_Statics::NewProp_StaminaText_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Component/CharacterStaminaWidget.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCharacterStaminaWidget_Statics::NewProp_StaminaText = { "StaminaText", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterStaminaWidget, StaminaText), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCharacterStaminaWidget_Statics::NewProp_StaminaText_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterStaminaWidget_Statics::NewProp_StaminaText_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UCharacterStaminaWidget_Statics::NewProp_StaminaReg_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/Component/CharacterStaminaWidget.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UCharacterStaminaWidget_Statics::NewProp_StaminaReg = { "StaminaReg", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UCharacterStaminaWidget, StaminaReg), Z_Construct_UClass_UTextBlock_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UCharacterStaminaWidget_Statics::NewProp_StaminaReg_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterStaminaWidget_Statics::NewProp_StaminaReg_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UCharacterStaminaWidget_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterStaminaWidget_Statics::NewProp_StaminaBar,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterStaminaWidget_Statics::NewProp_StaminaText,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UCharacterStaminaWidget_Statics::NewProp_StaminaReg,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UCharacterStaminaWidget_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UCharacterStaminaWidget>::IsAbstract,
 	};
@@ -54,11 +98,11 @@ void EmptyLinkFunctionForGeneratedCodeCharacterStaminaWidget() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_UCharacterStaminaWidget_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterStaminaWidget_Statics::PropPointers),
 		0,
 		0x00B010A0u,
 		METADATA_PARAMS(Z_Construct_UClass_UCharacterStaminaWidget_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_UCharacterStaminaWidget_Statics::Class_MetaDataParams))
@@ -72,7 +116,7 @@ void EmptyLinkFunctionForGeneratedCodeCharacterStaminaWidget() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UCharacterStaminaWidget, 2230962156);
+	IMPLEMENT_CLASS(UCharacterStaminaWidget, 4238220151);
 	template<> EXCALIBUR_API UClass* StaticClass<UCharacterStaminaWidget>()
 	{
 		return UCharacterStaminaWidget::StaticClass();

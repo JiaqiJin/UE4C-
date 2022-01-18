@@ -17,6 +17,12 @@ UHealthComponent::UHealthComponent()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 
+	PlayerCharacter = Cast<AHeroPlayerCharacter>(GetOwner());
+	if (!PlayerCharacter)
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s() PlayerCharacter Initialization error."), 
+			*FString(__FUNCTION__), *GetName());
+	}
 }
 
 
@@ -25,13 +31,12 @@ void UHealthComponent::BeginPlay()
 {
 	Super::BeginPlay();
 	
-	AHeroPlayerCharacter* PlayerCharacter = Cast<AHeroPlayerCharacter>(GetOwner());
 	AHeroPlayerState* PS = PlayerCharacter->GetPlayerState<AHeroPlayerState>();
 	AbilitySystemComponent = PlayerCharacter->GetAbilitySystemComponent();
 
 	InitializeHealthAttribute(PS);
 
-	BindHealthAttributeChange(PlayerCharacter);
+	BindHealthAttributeChange();
 
 }
 
@@ -51,6 +56,11 @@ void UHealthComponent::MaxHealthChanged(const FOnAttributeChangeData& Data)
 {
 	float NewValue = Data.NewValue;
 	float OldValue = Data.OldValue;
+
+	MaxHealth = NewValue;
+	UpdateHealthBarPercent();
+	UpdateHealthBarText();
+
 }
 
 void UHealthComponent::InitializeHealthAttribute(class AHeroPlayerState* PS)
@@ -74,7 +84,7 @@ void UHealthComponent::InitializeHealthAttribute(class AHeroPlayerState* PS)
 	}
 }
 
-void UHealthComponent::BindHealthAttributeChange(class AHeroPlayerCharacter* PlayerCharacter)
+void UHealthComponent::BindHealthAttributeChange()
 {
 	if (PlayerCharacter)
 	{
@@ -91,8 +101,7 @@ void UHealthComponent::BindHealthAttributeChange(class AHeroPlayerCharacter* Pla
 
 void UHealthComponent::UpdateHealthBarPercent()
 {
-	AHeroPlayerCharacter* HeroCharacter = Cast<AHeroPlayerCharacter>(GetOwner());
-	AHeroPlayerController* HeroController = Cast<AHeroPlayerController>(HeroCharacter->GetController());
+	AHeroPlayerController* HeroController = Cast<AHeroPlayerController>(PlayerCharacter->GetController());
 	if (HeroController)
 	{
 		UHeroCharacterUIMain* MainUI = HeroController->GetHeroCharacterUIMain();
@@ -105,12 +114,28 @@ void UHealthComponent::UpdateHealthBarPercent()
 
 void UHealthComponent::UpdateHealthBarText()
 {
-
+	AHeroPlayerController* HeroController = Cast<AHeroPlayerController>(PlayerCharacter->GetController());
+	if (HeroController)
+	{
+		UHeroCharacterUIMain* MainUI = HeroController->GetHeroCharacterUIMain();
+		if (MainUI)
+		{
+			MainUI->SetHealthTextBlock(Health, MaxHealth);
+		}
+	}
 }
 
 void UHealthComponent::UpdateHealthRegenerationBarText()
 {
-
+	AHeroPlayerController* HeroController = Cast<AHeroPlayerController>(PlayerCharacter->GetController());
+	if (HeroController)
+	{
+		class UHeroCharacterUIMain* MainUI = HeroController->GetHeroCharacterUIMain();
+		if (MainUI)
+		{
+			MainUI->SetHealthRegenerationVisibility(Health != MaxHealth);
+		}
+	}
 }
 
 void UHealthComponent::UpdateRegenerationVisibility()

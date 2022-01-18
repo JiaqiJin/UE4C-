@@ -18,6 +18,8 @@ void EmptyLinkFunctionForGeneratedCodeHeroCharacterUIMain() {}
 	UMG_API UClass* Z_Construct_UClass_UUserWidget();
 	UPackage* Z_Construct_UPackage__Script_Excalibur();
 	EXCALIBUR_API UClass* Z_Construct_UClass_UCharacterHealthWidget_NoRegister();
+	EXCALIBUR_API UClass* Z_Construct_UClass_UCharacterManaWidget_NoRegister();
+	EXCALIBUR_API UClass* Z_Construct_UClass_UCharacterStaminaWidget_NoRegister();
 // End Cross Module References
 	void UHeroCharacterUIMain::StaticRegisterNativesUHeroCharacterUIMain()
 	{
@@ -36,6 +38,14 @@ void EmptyLinkFunctionForGeneratedCodeHeroCharacterUIMain() {}
 		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HeroHealth_MetaData[];
 #endif
 		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_HeroHealth;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HeroMana_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_HeroMana;
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_HeroStamina_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_HeroStamina;
 		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
@@ -59,8 +69,26 @@ void EmptyLinkFunctionForGeneratedCodeHeroCharacterUIMain() {}
 	};
 #endif
 	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UHeroCharacterUIMain_Statics::NewProp_HeroHealth = { "HeroHealth", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHeroCharacterUIMain, HeroHealth), Z_Construct_UClass_UCharacterHealthWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UHeroCharacterUIMain_Statics::NewProp_HeroHealth_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHeroCharacterUIMain_Statics::NewProp_HeroHealth_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHeroCharacterUIMain_Statics::NewProp_HeroMana_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/HeroCharacterUIMain.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UHeroCharacterUIMain_Statics::NewProp_HeroMana = { "HeroMana", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHeroCharacterUIMain, HeroMana), Z_Construct_UClass_UCharacterManaWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UHeroCharacterUIMain_Statics::NewProp_HeroMana_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHeroCharacterUIMain_Statics::NewProp_HeroMana_MetaData)) };
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_UHeroCharacterUIMain_Statics::NewProp_HeroStamina_MetaData[] = {
+		{ "BindWidget", "" },
+		{ "EditInline", "true" },
+		{ "ModuleRelativePath", "UI/HeroCharacterUIMain.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_UHeroCharacterUIMain_Statics::NewProp_HeroStamina = { "HeroStamina", nullptr, (EPropertyFlags)0x0010000000080008, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(UHeroCharacterUIMain, HeroStamina), Z_Construct_UClass_UCharacterStaminaWidget_NoRegister, METADATA_PARAMS(Z_Construct_UClass_UHeroCharacterUIMain_Statics::NewProp_HeroStamina_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_UHeroCharacterUIMain_Statics::NewProp_HeroStamina_MetaData)) };
 	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_UHeroCharacterUIMain_Statics::PropPointers[] = {
 		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroCharacterUIMain_Statics::NewProp_HeroHealth,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroCharacterUIMain_Statics::NewProp_HeroMana,
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_UHeroCharacterUIMain_Statics::NewProp_HeroStamina,
 	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_UHeroCharacterUIMain_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<UHeroCharacterUIMain>::IsAbstract,
@@ -89,7 +117,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroCharacterUIMain() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(UHeroCharacterUIMain, 1260422981);
+	IMPLEMENT_CLASS(UHeroCharacterUIMain, 4060772260);
 	template<> EXCALIBUR_API UClass* StaticClass<UHeroCharacterUIMain>()
 	{
 		return UHeroCharacterUIMain::StaticClass();
