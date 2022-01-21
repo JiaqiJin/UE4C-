@@ -1,19 +1,29 @@
 ﻿  Using 'git status' to determine working set for adaptive non-unity build (E:\VisualStudio\UE4C_PlusPlus).
   Parsing headers for ExcaliburEditor
     Running UnrealHeaderTool "E:\VisualStudio\UE4C_PlusPlus\Excalibur\Excalibur.uproject" "E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\ExcaliburEditor\Development\ExcaliburEditor.uhtmanifest" -LogCmds="loginit warning, logexit warning, logdatabase error" -Unattended -WarningsAsErrors -abslog="C:\Users\Usuario\AppData\Local\UnrealBuildTool\Log_UHT.txt" -installed
-  Reflection code generated for ExcaliburEditor in 3,5263426 seconds
+  Reflection code generated for ExcaliburEditor in 3,4433387 seconds
   Building ExcaliburEditor...
   Using Visual Studio 2019 14.29.30136 toolchain (C:\Program Files (x86)\Microsoft Visual Studio\2019\Community\VC\Tools\MSVC\14.29.30133) and Windows 10.0.19041.0 SDK (C:\Program Files (x86)\Windows Kits\10).
-  Building 8 actions with 12 processes...
-    [1/8] ManaComponent.gen.cpp
-    [2/8] StaminaComponent.gen.cpp
-    [3/8] HeroPlayerCharacter.cpp
-    [4/8] StaminaComponent.cpp
-    [5/8] ManaComponent.cpp
-    [6/8] UE4Editor-Excalibur-0010.lib
-       Creating library E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0010.lib and object E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0010.exp
-    [7/8] UE4Editor-Excalibur-0010.dll
-       Creating library E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0010.suppressed.lib and object E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0010.suppressed.exp
-    [8/8] ExcaliburEditor.target
-  Total time in Parallel executor: 7,71 seconds
-  Total execution time: 12,03 seconds
+  Building 16 actions with 12 processes...
+    [1/16] Excalibur.init.gen.cpp
+    [2/16] HeroDamageDataAsset.gen.cpp
+    [3/16] HeroDamageDataAsset.cpp
+    [4/16] HeroPlayerAttributeSet.cpp
+    [5/16] HeroPlayerState.cpp
+    [6/16] HeroCharacterMovementComponent.cpp
+    [7/16] HeroDamageExcutionCalculation.cpp
+E:\VisualStudio\UE4C_PlusPlus\Excalibur\Source\Excalibur\Damage\HeroDamageExcutionCalculation.cpp(39): warning C4996: 'UAbilitySystemComponent::AvatarActor': This will be made private in future engine versions. Use SetAvatarActor or GetAvatarActor instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+E:\VisualStudio\UE4C_PlusPlus\Excalibur\Source\Excalibur\Damage\HeroDamageExcutionCalculation.cpp(40): warning C4996: 'UAbilitySystemComponent::AvatarActor': This will be made private in future engine versions. Use SetAvatarActor or GetAvatarActor instead. Please update your code to the new API before upgrading to the next release, otherwise your project will no longer compile.
+    [8/16] HealthComponent.cpp
+    [9/16] HeroGameplayStatics.cpp
+    [10/16] HeroPlayerCharacter.gen.cpp
+    [11/16] ManaComponent.cpp
+    [12/16] StaminaComponent.cpp
+    [13/16] HeroPlayerCharacter.cpp
+    [14/16] UE4Editor-Excalibur-0021.lib
+       Creating library E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0021.lib and object E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0021.exp
+    [15/16] UE4Editor-Excalibur-0021.dll
+       Creating library E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0021.suppressed.lib and object E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\UE4Editor-Excalibur-0021.suppressed.exp
+    [16/16] ExcaliburEditor.target
+  Total time in Parallel executor: 10,22 seconds
+  Total execution time: 14,44 seconds

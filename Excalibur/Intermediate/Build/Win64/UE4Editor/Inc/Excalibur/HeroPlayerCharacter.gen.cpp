@@ -17,6 +17,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerCharacter() {}
 	EXCALIBUR_API UClass* Z_Construct_UClass_AHeroPlayerCharacter();
 	EXCALIBUR_API UClass* Z_Construct_UClass_AExcaliburCharacter();
 	UPackage* Z_Construct_UPackage__Script_Excalibur();
+	EXCALIBUR_API UClass* Z_Construct_UClass_UHeroDamageDataAsset_NoRegister();
 // End Cross Module References
 	void AHeroPlayerCharacter::StaticRegisterNativesAHeroPlayerCharacter()
 	{
@@ -31,6 +32,11 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerCharacter() {}
 #if WITH_METADATA
 		static const UE4CodeGen_Private::FMetaDataPairParam Class_MetaDataParams[];
 #endif
+#if WITH_METADATA
+		static const UE4CodeGen_Private::FMetaDataPairParam NewProp_DamageDataAsset_MetaData[];
+#endif
+		static const UE4CodeGen_Private::FObjectPropertyParams NewProp_DamageDataAsset;
+		static const UE4CodeGen_Private::FPropertyParamsBase* const PropPointers[];
 		static const FCppClassTypeInfoStatic StaticCppClassTypeInfo;
 		static const UE4CodeGen_Private::FClassParams ClassParams;
 	};
@@ -46,6 +52,16 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerCharacter() {}
 		{ "ObjectInitializerConstructorDeclared", "" },
 	};
 #endif
+#if WITH_METADATA
+	const UE4CodeGen_Private::FMetaDataPairParam Z_Construct_UClass_AHeroPlayerCharacter_Statics::NewProp_DamageDataAsset_MetaData[] = {
+		{ "Category", "Player|Data" },
+		{ "ModuleRelativePath", "Character/HeroPlayerCharacter.h" },
+	};
+#endif
+	const UE4CodeGen_Private::FObjectPropertyParams Z_Construct_UClass_AHeroPlayerCharacter_Statics::NewProp_DamageDataAsset = { "DamageDataAsset", nullptr, (EPropertyFlags)0x0020080000000015, UE4CodeGen_Private::EPropertyGenFlags::Object, RF_Public|RF_Transient|RF_MarkAsNative, 1, STRUCT_OFFSET(AHeroPlayerCharacter, DamageDataAsset), Z_Construct_UClass_UHeroDamageDataAsset_NoRegister, METADATA_PARAMS(Z_Construct_UClass_AHeroPlayerCharacter_Statics::NewProp_DamageDataAsset_MetaData, UE_ARRAY_COUNT(Z_Construct_UClass_AHeroPlayerCharacter_Statics::NewProp_DamageDataAsset_MetaData)) };
+	const UE4CodeGen_Private::FPropertyParamsBase* const Z_Construct_UClass_AHeroPlayerCharacter_Statics::PropPointers[] = {
+		(const UE4CodeGen_Private::FPropertyParamsBase*)&Z_Construct_UClass_AHeroPlayerCharacter_Statics::NewProp_DamageDataAsset,
+	};
 	const FCppClassTypeInfoStatic Z_Construct_UClass_AHeroPlayerCharacter_Statics::StaticCppClassTypeInfo = {
 		TCppClassTypeTraits<AHeroPlayerCharacter>::IsAbstract,
 	};
@@ -55,11 +71,11 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerCharacter() {}
 		&StaticCppClassTypeInfo,
 		DependentSingletons,
 		nullptr,
-		nullptr,
+		Z_Construct_UClass_AHeroPlayerCharacter_Statics::PropPointers,
 		nullptr,
 		UE_ARRAY_COUNT(DependentSingletons),
 		0,
-		0,
+		UE_ARRAY_COUNT(Z_Construct_UClass_AHeroPlayerCharacter_Statics::PropPointers),
 		0,
 		0x009000A4u,
 		METADATA_PARAMS(Z_Construct_UClass_AHeroPlayerCharacter_Statics::Class_MetaDataParams, UE_ARRAY_COUNT(Z_Construct_UClass_AHeroPlayerCharacter_Statics::Class_MetaDataParams))
@@ -73,7 +89,7 @@ void EmptyLinkFunctionForGeneratedCodeHeroPlayerCharacter() {}
 		}
 		return OuterClass;
 	}
-	IMPLEMENT_CLASS(AHeroPlayerCharacter, 3983899701);
+	IMPLEMENT_CLASS(AHeroPlayerCharacter, 2545765191);
 	template<> EXCALIBUR_API UClass* StaticClass<AHeroPlayerCharacter>()
 	{
 		return AHeroPlayerCharacter::StaticClass();

@@ -64,6 +64,8 @@ E:\VisualStudio\UE4C_PlusPlus\Excalibur\Source\Excalibur\Data/HeroAbilityDataAss
 E:\VisualStudio\UE4C_PlusPlus\Excalibur\Source\Excalibur/Excalibur.h
 E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Inc\Excalibur\HeroAbilityDataAsset.generated.h
 E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Inc\Excalibur\ExcaliburCharacter.generated.h
+E:\VisualStudio\UE4C_PlusPlus\Excalibur\Source\Excalibur/Data/HeroDamageDataAsset.h
+E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Inc\Excalibur\HeroDamageDataAsset.generated.h
 E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Inc\Excalibur\HeroPlayerCharacter.generated.h
 E:\VisualStudio\UE4C_PlusPlus\Excalibur\Source\Excalibur\Character\MovementComp/HeroCharacterMovementComponent.h
 E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/CharacterMovementComponent.h

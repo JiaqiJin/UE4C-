@@ -20,4 +20,7 @@ public:
 
 	void Execute_Implementation(const FGameplayEffectCustomExecutionParameters& ExecutionParams,
 		FGameplayEffectCustomExecutionOutput& OutExecutionOutput) const;
+
+private:
+	class UHeroDamageDataAsset* DamageData;
 };

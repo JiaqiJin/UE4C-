@@ -6,6 +6,7 @@
 #include "GameFramework/Character.h"
 #include "Excalibur/ExcaliburCharacter.h"
 #include "Excalibur/Excalibur.h"
+#include "Excalibur/Data/HeroDamageDataAsset.h"
 #include "HeroPlayerCharacter.generated.h"
 
 UCLASS()
@@ -28,6 +29,8 @@ public:
 	// Called to bind functionality to input
 	virtual void SetupPlayerInputComponent(class UInputComponent* PlayerInputComponent) override;
 
+	FORCEINLINE UHeroDamageDataAsset* GetDamageData() const { return DamageDataAsset; }
 protected:
-
+	UPROPERTY(EditAnywhere, BlueprintReadOnly, Category = "Player|Data")
+	UHeroDamageDataAsset* DamageDataAsset;
 };

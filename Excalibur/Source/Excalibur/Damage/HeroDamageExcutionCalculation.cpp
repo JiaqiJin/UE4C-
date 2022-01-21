@@ -2,6 +2,7 @@
 
 
 #include "HeroDamageExcutionCalculation.h"
+#include "Excalibur/Data/HeroDamageDataAsset.h"
 #include "Excalibur/Attributes/HeroPlayerAttributeSet.h"
 
 struct HeroDamageStatics
@@ -22,7 +23,11 @@ static const HeroDamageStatics& DamageStatics()
 
 UHeroDamageExcutionCalculation::UHeroDamageExcutionCalculation()
 {
-	
+	struct ConstructorHelpers::FObjectFinder<UHeroDamageDataAsset> HeroDamageDataClass(TEXT("/Game/Player/Damage/DamageData/HeroDamageAsset"));
+	if (HeroDamageDataClass.Object != NULL)
+	{
+		DamageData = HeroDamageDataClass.Object;
+	}
 }
 
 void UHeroDamageExcutionCalculation::Execute_Implementation(const FGameplayEffectCustomExecutionParameters& ExecutionParams,
@@ -47,9 +52,14 @@ void UHeroDamageExcutionCalculation::Execute_Implementation(const FGameplayEffec
 
 	FName DamageTag;
 
+	if (DamageData)
+	{
+		DamageTag = DamageData->GetDataTag();
+	}
+
 	//float Damage = FMath::Max(<float>(Spec.Get))
 	float Damage = 0.0f;
-	Damage += FMath::Max<float>(Spec.GetSetByCallerMagnitude(FGameplayTag::RequestGameplayTag(FName("Data.Damage")), false, -1.0f), 0.0f);
+	Damage += FMath::Max<float>(Spec.GetSetByCallerMagnitude(FGameplayTag::RequestGameplayTag(DamageTag), false, -1.0f), 0.0f);
 
 	if (Damage > 0.0f)
 	{

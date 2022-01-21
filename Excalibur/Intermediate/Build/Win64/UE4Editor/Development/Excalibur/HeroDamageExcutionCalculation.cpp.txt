@@ -33,6 +33,8 @@ E:\UnrealEngine4\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Source\Gamepla
 E:\UnrealEngine4\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\GameplayEffectCalculation.generated.h
 E:\UnrealEngine4\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Intermediate\Build\Win64\UE4Editor\Inc\GameplayAbilities\GameplayEffectExecutionCalculation.generated.h
 E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Inc\Excalibur\HeroDamageExcutionCalculation.generated.h
+E:\VisualStudio\UE4C_PlusPlus\Excalibur\Source\Excalibur/Data/HeroDamageDataAsset.h
+E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Inc\Excalibur\HeroDamageDataAsset.generated.h
 E:\VisualStudio\UE4C_PlusPlus\Excalibur\Source\Excalibur/Attributes/HeroPlayerAttributeSet.h
 E:\UnrealEngine4\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\AbilitySystemComponent.h
 E:\UnrealEngine4\UE_4.26\Engine\Plugins\Runtime\GameplayAbilities\Source\GameplayAbilities\Public\GameplayCueInterface.h
