@@ -49,7 +49,7 @@ void UHealthComponent::HealthChanged(const FOnAttributeChangeData& Data)
 	UpdateHealthBarPercent();
 	UpdateHealthBarText();
 
-	UE_LOG(LogTemp, Warning, TEXT("New Value : %f, Old Value : %f"), NewValue, OldValue)
+	//UE_LOG(LogTemp, Warning, TEXT("New Value : %f, Old Value : %f"), NewValue, OldValue)
 }
 
 void UHealthComponent::MaxHealthChanged(const FOnAttributeChangeData& Data)
