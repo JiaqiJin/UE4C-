@@ -17,12 +17,6 @@ UStaminaComponent::UStaminaComponent()
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
 
-	PlayerCharacter = Cast<AHeroPlayerCharacter>(GetOwner());
-	if (!PlayerCharacter)
-	{
-		UE_LOG(LogTemp, Error, TEXT("%s() PlayerCharacter Initialization error."),
-			*FString(__FUNCTION__), *GetName());
-	}
 }
 
 
@@ -30,6 +24,13 @@ UStaminaComponent::UStaminaComponent()
 void UStaminaComponent::BeginPlay()
 {
 	Super::BeginPlay();
+
+	PlayerCharacter = Cast<AHeroPlayerCharacter>(GetOwner());
+	if (!PlayerCharacter)
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s() PlayerCharacter Initialization error."),
+			*FString(__FUNCTION__), *GetName());
+	}
 
 	AHeroPlayerState* PS = PlayerCharacter->GetPlayerState<AHeroPlayerState>();
 	AbilitySystemComponent = PlayerCharacter->GetAbilitySystemComponent();

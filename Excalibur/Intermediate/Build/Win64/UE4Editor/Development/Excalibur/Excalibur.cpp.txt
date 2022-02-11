@@ -1,2 +1,0 @@
-E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\Definitions.Excalibur.h
-E:\VisualStudio\UE4C_PlusPlus\Excalibur\Source\Excalibur\Excalibur.h

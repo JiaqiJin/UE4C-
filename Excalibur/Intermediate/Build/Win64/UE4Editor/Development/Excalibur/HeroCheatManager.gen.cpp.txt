@@ -1,7 +1,0 @@
-E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Development\Excalibur\Definitions.Excalibur.h
-E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/GeneratedCppIncludes.h
-E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\CoreUObject\Public\UObject/MetaData.h
-E:\VisualStudio\UE4C_PlusPlus\Excalibur\Source\Excalibur/Data/HeroCheatManager.h
-E:\UnrealEngine4\UE_4.26\Engine\Source\Runtime\Engine\Classes\GameFramework/CheatManager.h
-E:\UnrealEngine4\UE_4.26\Engine\Intermediate\Build\Win64\UE4Editor\Inc\Engine\CheatManager.generated.h
-E:\VisualStudio\UE4C_PlusPlus\Excalibur\Intermediate\Build\Win64\UE4Editor\Inc\Excalibur\HeroCheatManager.generated.h

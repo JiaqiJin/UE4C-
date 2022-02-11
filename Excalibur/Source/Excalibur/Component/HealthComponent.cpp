@@ -16,13 +16,6 @@ UHealthComponent::UHealthComponent()
 	// Set this component to be initialized when the game starts, and to be ticked every frame.  You can turn these features
 	// off to improve performance if you don't need them.
 	PrimaryComponentTick.bCanEverTick = true;
-
-	PlayerCharacter = Cast<AHeroPlayerCharacter>(GetOwner());
-	if (!PlayerCharacter)
-	{
-		UE_LOG(LogTemp, Error, TEXT("%s() PlayerCharacter Initialization error."), 
-			*FString(__FUNCTION__), *GetName());
-	}
 }
 
 
@@ -31,6 +24,13 @@ void UHealthComponent::BeginPlay()
 {
 	Super::BeginPlay();
 	
+	PlayerCharacter = Cast<AHeroPlayerCharacter>(GetOwner());
+	if (!PlayerCharacter)
+	{
+		UE_LOG(LogTemp, Error, TEXT("%s() PlayerCharacter Initialization error."),
+			*FString(__FUNCTION__), *GetName());
+	}
+
 	AHeroPlayerState* PS = PlayerCharacter->GetPlayerState<AHeroPlayerState>();
 	AbilitySystemComponent = PlayerCharacter->GetAbilitySystemComponent();
 
